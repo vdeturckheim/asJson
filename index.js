@@ -26,8 +26,7 @@ const clean = function (obj, seen) {
     for (let i = 0; i < keys.length; ++i) {
         const key = keys[i];
         const descriptor = Object.getOwnPropertyDescriptor(obj, key);
-        if (descriptor && (descriptor.get || descriptor.set)) {
-
+        if (descriptor.get || descriptor.set) {
             Object.defineProperty(result, key, descriptor);
         }
         else {

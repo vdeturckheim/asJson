@@ -11,8 +11,7 @@ const Clean = require('../index');
 
 describe('Clean', () => {
 
-    const fct1 = function () {
-    };
+    const fct1 = function () {};
     fct1.a = 1;
 
     const cyclic = { a: { b: { c: {} } }, a1: 1 };
@@ -21,6 +20,27 @@ describe('Clean', () => {
     const cyclicfct = function () {};
     cyclicfct.a = { b: { c: {} } };
     cyclicfct.a.b.c = cyclicfct;
+
+    const ro = { a: 1 };
+    Object.defineProperty(ro, 'b', {
+        enumerable: true,
+        get: function () {
+
+            return 2;
+        }
+    });
+    let val = 5;
+    Object.defineProperty(ro, 'c', {
+        enumerable: true,
+        get: function () {
+
+            return val;
+        },
+        set: function () {
+
+            val++;
+        }
+    });
 
     const tests = [
         {
@@ -40,6 +60,9 @@ describe('Clean', () => {
         },
         {
             input: cyclicfct, output: { a: { b: { c: {} } } }
+        },
+        {
+            input: ro, output: ro
         }
     ];
 
