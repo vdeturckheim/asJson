@@ -8,30 +8,30 @@
     "preversion": "npm test",
     "prepublish": "npm test"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/sqreen/clean-jsonable.git"
-  },
   "keywords": [
     "circular",
     "js",
     "json",
     "clean"
   ],
-  "author": {
-    "name": "vdeturckheim",
-    "email": "vlad@sqreen.io"
-  },
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/sqreen/clean-jsonable/issues"
-  },
-  "homepage": "https://github.com/sqreen/clean-jsonable#readme",
+  "author": "vdeturckheim <vlad@sqreen.io>",
+  "license": "MIT",
   "devDependencies": {
     "code": "^3.0.1",
     "lab": "^10.9.0"
   },
   "dependencies": {
     "hoek": "^4.0.1"
-  }
+  },
+  "directories": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vdeturckheim/asJson.git"
+  },
+  "bugs": {
+    "url": "https://github.com/vdeturckheim/asJson/issues"
+  },
+  "homepage": "https://github.com/vdeturckheim/asJson#readme"
 }
