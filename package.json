@@ -30,5 +30,8 @@
   "devDependencies": {
     "code": "^3.0.1",
     "lab": "^10.9.0"
+  },
+  "dependencies": {
+    "lodash.clone": "^4.4.0"
   }
 }

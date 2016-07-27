@@ -1,5 +1,5 @@
 'use strict';
-
+const Clone = require('lodash.clone');
 
 const clean = function (obj, seen) {
 
@@ -9,8 +9,7 @@ const clean = function (obj, seen) {
 
     seen = seen || new Set();
 
-    const has = seen.has(obj);
-    if (has) {
+    if (seen.has(obj)) {
         return false;
     }
 
@@ -38,4 +37,9 @@ const clean = function (obj, seen) {
     return result;
 };
 
-module.exports = clean;
+const starter = function (obj) {
+
+    return clean(Clone(obj));
+};
+
+module.exports = starter;
