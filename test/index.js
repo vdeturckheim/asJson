@@ -56,10 +56,10 @@ describe('Clean', () => {
             input: { a: 1, b: 2, c: fct1 }, output: { a: 1, b: 2, c: { a: 1 } }
         },
         {
-            input: cyclic, output: { a: { b: { c: { a: { }, a1: 1 } } }, a1: 1 }
+            input: cyclic, output: { a: { b: { c: { } } }, a1: 1 }
         },
         {
-            input: cyclicfct, output: { a: { b: { c: { a: {} } } } }
+            input: cyclicfct, output: { a: { b: { c: { } } } }
         },
         {
             input: ro, output: ro

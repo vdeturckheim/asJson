@@ -32,6 +32,6 @@
     "lab": "^10.9.0"
   },
   "dependencies": {
-    "lodash.clone": "^4.4.0"
+    "hoek": "^4.0.1"
   }
 }

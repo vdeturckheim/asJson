@@ -1,5 +1,5 @@
 'use strict';
-const Clone = require('lodash.clone');
+const Clone = require('hoek').clone;
 
 const clean = function (obj, seen) {
 
