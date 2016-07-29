@@ -1,6 +1,6 @@
 {
   "name": "@vdeturckheim/asjson",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "JS library to provide provide jsoable clone of js object",
   "main": "index.js",
   "scripts": {
@@ -20,8 +20,7 @@
     "code": "^3.0.1",
     "lab": "^10.9.0"
   },
-  "dependencies": {
-  },
+  "dependencies": {},
   "directories": {
     "test": "test"
   },
