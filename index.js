@@ -1,19 +1,15 @@
 'use strict';
-const Clone = require('hoek').clone;
-
-const clean = function (obj, seen) {
+const clean = function (obj, seen, target) {
 
     if ((typeof obj !== 'object' && typeof obj !== 'function') || !obj) {
         return obj;
     }
 
-    seen = seen || new Set();
-
     if (seen.has(obj)) {
         return false;
     }
 
-    let result = {};
+    let result = target || {};
 
     if (Array.isArray(obj)) {
         result = [];
@@ -39,7 +35,7 @@ const clean = function (obj, seen) {
 
 const starter = function (obj) {
 
-    return clean(Clone(obj));
+    return clean(obj, new Set(), {});
 };
 
 module.exports = starter;

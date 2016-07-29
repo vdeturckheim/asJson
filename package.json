@@ -21,7 +21,6 @@
     "lab": "^10.9.0"
   },
   "dependencies": {
-    "hoek": "^4.0.1"
   },
   "directories": {
     "test": "test"
