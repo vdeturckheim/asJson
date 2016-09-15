@@ -27,6 +27,9 @@ const clean = function (obj, seen, target) {
         else {
             const cleaned = clean(obj[key], seen);
             result[key] = cleaned || {};
+            if (cleaned === 0) {
+                result[key] = 0;
+            }
         }
     }
 

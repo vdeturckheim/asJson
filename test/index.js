@@ -50,7 +50,7 @@ describe('Clean', () => {
             input: { a: [1] }, output: { a: [1] }
         },
         {
-            input: { a: 1, b: 2, c: function () {} }, output: { a: 1, b: 2, c: {} }
+            input: { a: 1, b: 0, c: function () {} }, output: { a: 1, b: 0, c: {} }
         },
         {
             input: { a: 1, b: 2, c: fct1 }, output: { a: 1, b: 2, c: { a: 1 } }
