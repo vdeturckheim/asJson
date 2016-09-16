@@ -6,7 +6,7 @@ const clean = function (obj, seen, target) {
     }
 
     if (seen.has(obj)) {
-        return false;
+        return {};
     }
 
     let result = target || {};
@@ -26,9 +26,9 @@ const clean = function (obj, seen, target) {
         }
         else {
             const cleaned = clean(obj[key], seen);
-            result[key] = cleaned || {};
-            if (cleaned === 0) {
-                result[key] = 0;
+            result[key] = cleaned;
+            if (cleaned === null || cleaned === undefined) {
+                result[key] = {};
             }
         }
     }

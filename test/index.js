@@ -63,6 +63,12 @@ describe('Clean', () => {
         },
         {
             input: ro, output: ro
+        },
+        {
+            input: { userName: { $gt: '' } }, output: { userName: { $gt: '' } }
+        },
+        {
+            input: { a: null, b: undefined }, output: { a: {}, b: {} }
         }
     ];
 
